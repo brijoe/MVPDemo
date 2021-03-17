@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LearnMVP</string>
+    <string name="toast_login_tip">用户名或密码不能为空！</string>
 </resources>

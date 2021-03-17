@@ -1,32 +1,42 @@
 package io.brijoe.learnmvp;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
-import java.lang.ref.Reference;
-import java.lang.ref.WeakReference;
+import io.brijoe.learnmvp.base.BaseMVPActivity;
+import io.brijoe.learnmvp.base.BasePresenter;
+import io.brijoe.learnmvp.login.LoginActivity;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseMVPActivity implements View.OnClickListener {
 
-    private Reference<Integer> ref;
+    private Button mBtnEnter;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-//        ref = new WeakReference<>(20);
+    protected int getContentView() {
+        return R.layout.activity_main;
     }
 
-    public void login(View view) {
-        Reference<Integer> ref = new WeakReference<>(20);
-        Log.e("Bridge", ref.get() + "");
+    @Override
+    protected void init() {
+        //do something init
+        mBtnEnter = findViewById(R.id.btn_enter);
+        mBtnEnter.setOnClickListener(this);
     }
 
-    public void gc(View view) {
-        System.gc();
+    @Override
+    protected BasePresenter createPresenter() {
+        return null;
     }
 
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_enter:
+                Utils.launchActivity(this, LoginActivity.class);
+                finish();
+                break;
+        }
+    }
 }

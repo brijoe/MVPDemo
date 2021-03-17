@@ -9,18 +9,24 @@
 
 
     <EditText
+        android:id="@+id/edt_username"
         android:layout_width="match_parent"
-        android:layout_height="45dp" />
+        android:layout_height="45dp"
+        android:hint="用户名" />
 
     <EditText
+        android:id="@+id/edt_password"
         android:layout_width="match_parent"
-        android:layout_height="45dp" />
+        android:layout_height="45dp"
+        android:hint="密码"
+        android:inputType="textPassword" />
 
 
     <Button
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
-        android:text="登录"
-        android:layout_height="45dp" />
+        android:layout_height="45dp"
+        android:text="登录" />
 
 
 </LinearLayout>

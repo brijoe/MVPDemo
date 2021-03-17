@@ -8,11 +8,12 @@
     tools:context=".MainActivity">
 
 
-    <Button
+    <TextView
         android:id="@+id/btn_enter"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_gravity="center"
         android:text="开启新体验" />
 
 

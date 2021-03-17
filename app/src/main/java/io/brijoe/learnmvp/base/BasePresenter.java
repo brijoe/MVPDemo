@@ -28,10 +28,8 @@ public class BasePresenter<V> {
 
     protected Reference<V> mViewRef;
 
-    protected V mView;
 
     public final void attachView(V view) {
-        this.mView = view;
         mViewRef = new WeakReference<V>(view);
     }
 

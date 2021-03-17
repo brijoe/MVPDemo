@@ -1,6 +1,6 @@
 package io.brijoe.learnmvp.base;
 
-import androidx.annotation.IdRes;
+import androidx.annotation.StringRes;
 
 /**
  * View层一些基础操作
@@ -11,7 +11,7 @@ public interface IBaseView {
      *
      * @param resId
      */
-    void showToast(@IdRes int resId);
+    void showToast(@StringRes int resId);
 
     /**
      * 展示进度UI
